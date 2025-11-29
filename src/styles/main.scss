@@ -92,25 +92,57 @@
   }
 }
 
-.dots {
-  background: url("/images/slider-line.png") right center no-repeat;
-  min-height: 550px;
-  .dot {
-    width: 16px;
-    height: 16px;
-    background-color: #ffffff36;
-    margin-bottom: 5px;
-    transform: rotate(45deg);
-    &.active {
-      background-color: #fff;
+.main-banner-wrapper {
+  .bg-c-red {
+    @media (max-width: 767px) {
+      margin-bottom: 2rem;
     }
   }
-}
+  .banner-image {
+    background: url("/images/viking.png") right center no-repeat;
+    min-height: 550px;
+    background-size: cover;
+    @media (max-width: 767px) {
+      min-height: 280px;
+      background-size: 550px;
+      background: url("/images/viking-mobile.png") right center no-repeat;
+    }
+  }
 
-.banner-image {
-  background: url("/images/viking.png") right center no-repeat;
-  min-height: 550px;
-  background-size: cover;
+  .dots-wrapper {
+    .dots {
+      background: url("/images/slider-line.png") right center no-repeat;
+      min-height: 550px;
+      .dot {
+        width: 16px;
+        height: 16px;
+        background-color: #ffffff36;
+        margin-bottom: 5px;
+        transform: rotate(45deg);
+        &.active {
+          background-color: #fff;
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      width: 20%;
+      .dots {
+        min-height: 280px;
+        background: none;
+      }
+    }
+  }
+  .mobile-slide-title {
+    @media (max-width: 767px) {
+      margin-top: -3rem;
+      z-index: 10;
+      position: relative;
+      button {
+        max-width: fit-content;
+        margin: 2rem auto auto;
+      }
+    }
+  }
 }
 
 .socials {
