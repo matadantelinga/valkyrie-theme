@@ -136,3 +136,24 @@
     }
   }
 }
+
+footer {
+  background-image:
+    radial-gradient(
+      30% 70%,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0.85) 100%
+    ),
+    linear-gradient(
+      #000 0%,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(0, 0, 0, 0) 70%,
+      #000 100%
+    ),
+    url(/images/bg-footer.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
