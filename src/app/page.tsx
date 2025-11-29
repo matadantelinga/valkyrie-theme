@@ -5,6 +5,7 @@ import GamesSection from "../components/layout/games-section";
 import PaginationSection from "../components/layout/pagination-section";
 import SearchSection from "../components/layout/search-section";
 import TitleSection from "../components/layout/title-section";
+import { UpcomingGames } from "@/components/home/upcoming-games";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <BannerSlider />
       <FeatureSection />
       <TitleSection title="announcements" subTitle="Upcoming GAMES" />
+      <UpcomingGames />
       <TitleSection title="Most popular games" subTitle="ALL GAMES" />
       <SearchSection />
       <GamesSection />
