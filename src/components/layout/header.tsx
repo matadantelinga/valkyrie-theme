@@ -5,6 +5,7 @@ import Container from "./container";
 import { Menu, Search } from "lucide-react";
 import Link from "next/link";
 import { Input } from "../ui/input";
+import { SocialButtons } from "./social-buttons";
 
 export const Header = () => {
   return (
@@ -68,40 +69,7 @@ export const Header = () => {
               </div>
             </div>
           </div>
-          <div className="socials">
-            <ul className="flex gap-2 items-center">
-              <li>
-                <Link href={"#"}>
-                  <Image
-                    src={"/icons/ig.svg"}
-                    width={16}
-                    height={16}
-                    alt="ig"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link href={"#"}>
-                  <Image
-                    src={"/icons/dc.svg"}
-                    width={16}
-                    height={16}
-                    alt="dc"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link href={"#"}>
-                  <Image
-                    src={"/icons/fb.svg"}
-                    width={16}
-                    height={16}
-                    alt="fb"
-                  />
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <SocialButtons />
         </header>
       </Container>
     </>
