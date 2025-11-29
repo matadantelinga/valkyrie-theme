@@ -122,3 +122,10 @@
         @apply bg-background text-foreground;
     }
 }
+
+@layer demo {
+    .upcoming-card {
+        corner-shape: scoop;
+        border-radius: 1rem;
+    }
+}
