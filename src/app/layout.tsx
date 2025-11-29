@@ -8,6 +8,8 @@ import "@/styles/card.scss";
 import "@/styles/fonts/fonts.scss";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

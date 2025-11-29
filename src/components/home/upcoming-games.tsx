@@ -1,5 +1,8 @@
+"use client";
 import React from "react";
 import UpcomingGameCard from "../cards/upcoming-game-card";
+import Slider from "react-slick";
+import SliderArrow from "../ui/slider-arrow";
 
 export const UpcomingGames = () => {
   const staticData = [
@@ -76,21 +79,45 @@ export const UpcomingGames = () => {
         "Pathologic 2 is a survival horror RPG set in a mysterious plague-ridden town. You play as a healer struggling",
     },
   ];
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    nextArrow: <SliderArrow rotate />,
+    prevArrow: <SliderArrow />,
+    arrows: true,
+  };
+
   return (
     <div className="mt-10 grid grid-cols-12 gap-3 space-y-5">
-      {staticData.map((data, index) => (
-        <React.Fragment key={index}>
-          <div className="col-span-12 h-full w-full md:col-span-6 lg:col-span-3">
-            <UpcomingGameCard
-              key={index}
-              image={data.image}
-              title={data.title}
-              description={data.description}
-              isBadge
-            />
-          </div>
-        </React.Fragment>
-      ))}
+      <div className="hidden md:block col-span-12">
+        <Slider {...settings}>
+          {staticData.map((data, index) => (
+            <div key={index} className="px-3">
+              <UpcomingGameCard
+                image={data.image}
+                title={data.title}
+                description={data.description}
+                isBadge
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      <div className="block md:hidden col-span-12 grid grid-cols-1 space-y-5">
+        {staticData.map((data, index) => (
+          <UpcomingGameCard
+            key={index}
+            image={data.image}
+            title={data.title}
+            description={data.description}
+            isBadge
+          />
+        ))}
+      </div>
     </div>
   );
 };

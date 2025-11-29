@@ -142,3 +142,8 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.slick-prev:before,
+.slick-next:before {
+  content: "" !important;
+}
