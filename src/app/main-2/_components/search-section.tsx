@@ -67,8 +67,8 @@ export default function SearchSection() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between">
-      <NavigationMenu className="bg-c-gray font-anton-sc corner-shape-bevel text-white/50">
+    <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0">
+      <NavigationMenu className="bg-c-gray font-anton-sc corner-shape-bevel text-white/50 max-w-sm md:max-w-full overflow-x-auto scrollbar-hide">
         <NavigationMenuList className="flex px-5">
           {navbar.map((item, index) => (
             <NavigationMenuItem key={index}>
@@ -77,7 +77,7 @@ export default function SearchSection() {
                 className={` ${
                   item.active &&
                   "border-b-2 border-red-600 bg-gradient-to-r from-transparent via-red-800 to-transparent"
-                } block px-8 py-3 text-white shadow transition hover:bg-gradient-to-r hover:from-transparent hover:via-red-600 hover:to-transparent`}
+                } block px-8 md:py-3 text-white shadow transition hover:bg-gradient-to-r hover:from-transparent hover:via-red-600 hover:to-transparent text-center`}
               >
                 <Link href={item.href}>{item.title}</Link>
               </NavigationMenuLink>
