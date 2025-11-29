@@ -15,14 +15,12 @@ export default function PaginationSection() {
         <Divider>
           <PaginationContent className="border-t border-b border-white/50">
             <PaginationItem>
-              <PaginationLink size="default" href="#" className="rounded-none!">
-                <PaginationLink
-                  size="default"
-                  href="#"
-                  className="rounded-none! font-anton-sc text-white/50 hover:text-black"
-                >
-                  1
-                </PaginationLink>
+              <PaginationLink
+                size="default"
+                href="#"
+                className="rounded-none! font-anton-sc text-white/50 hover:text-black"
+              >
+                1
               </PaginationLink>
             </PaginationItem>
             <PaginationItem>
@@ -47,14 +45,12 @@ export default function PaginationSection() {
               <PaginationEllipsis className="font-anton-sc border-white/50 text-white/50" />
             </PaginationItem>
             <PaginationItem>
-              <PaginationLink size="default" href="#" className="rounded-none!">
-                <PaginationLink
-                  size="default"
-                  href="#"
-                  className="rounded-none! font-anton-sc text-white/50 hover:text-black"
-                >
-                  9
-                </PaginationLink>
+              <PaginationLink
+                size="default"
+                href="#"
+                className="rounded-none! font-anton-sc text-white/50 hover:text-black"
+              >
+                9
               </PaginationLink>
             </PaginationItem>
           </PaginationContent>
